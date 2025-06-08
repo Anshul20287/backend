@@ -1,6 +1,6 @@
 // The code can be written using both try catch and promises. Both of the methods are shown below
 const asyncHandler = (requestHandler)=>{
-    (req,res,next)=>{
+    return (req,res,next)=>{
         Promise.resolve(requestHandler(req,res,next))
         .catch((err) => next(err))
     }
